@@ -1,0 +1,129 @@
+.kGstZV {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    padding: 18.1333vw 0px 22.1333vw;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+.home__blob {
+    width: 300px;
+    /* fill:rgb(219, 189, 242); fe81b9 559df2*/
+    fill: #fe81b9;
+}
+  
+.home__blob-img {
+    /* width: 170px; */
+    width: 259px;
+    z-index: 2;
+}
+
+.gPQSUn {
+    width: 300px;
+    z-index: 2;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+/*sliding text*/
+.ijuMqW {
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Apercu;
+    white-space: nowrap;
+    /* color: rgb(219, 189, 242); 559df2 fe81b9*/
+    color: #559df2; 
+    font-size: 20vw;
+    animation: 10s linear 0s infinite normal none running fDhFdL;
+    right: auto;
+    animation-name: slidein;
+}
+
+/*Header*/
+.heASqm {
+    margin: 0px 2.66667vw;
+}
+
+
+.klPBwl {
+    border-top: 0.4vw solid rgb(0, 0, 0);
+    margin: 0px auto;
+    max-width: 94.6667vw;
+}
+
+
+
+
+
+
+@keyframes slidein {
+    from {
+      margin-left: 0%;
+      width: 100%
+    }
+  
+    to {
+      margin-left: -120%;
+      width: 100%;
+    }
+}
+
+
+/**/
+.yBZdR {
+    display: flex;
+    flex-direction: column;
+}
+
+.ekXVjW {
+    margin-bottom: -5.33333vw;
+    z-index: 0;
+    padding-top: 16vw;
+}
+
+.ekXVjW svg {
+    width: 26.1333vw;
+}
+
+.ekXVjW svg circle {
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.fCMfUw {
+    width: 9.06667vw;
+    padding: 0px 0px 5.86667vw;
+}
+
+@media (min-width: 900px) {
+    .kGstZV {
+        padding: 4.30556vw 0px 3.88889vw;
+    }
+    .gPQSUn {
+        width: 13vw;
+    }
+    .klPBwl {
+        border-top: 0.104167vw solid rgb(0, 0, 0);
+    }
+    .ekXVjW {
+        margin-bottom: 1.38889vw;
+        padding-top: 2.77778vw;
+    }
+    .ekXVjW svg {
+        width: 6.80556vw;
+    }
+    .fCMfUw {
+        width: 3.61111vw;
+        padding: 0px 0px 5.55556vw;
+    }
+
+}
+
