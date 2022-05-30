@@ -22,7 +22,7 @@ const Menu = () => {
                 <a  href='/'>Title</a>
             </button>
             <button id='login-btn'>
-                <a href='/login'>login</a>
+                <a href='/user'>User</a>
             </button>
         </div>
 
