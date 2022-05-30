@@ -1,7 +1,10 @@
-package service;
+package com.example.signup.service;
 
-import dto.Member;
-import repository.MemberRepository;
+import com.example.signup.dto.Member;
+import com.example.signup.repository.MemberRepository;
+
+import java.util.List;
+import java.util.Optional;
 
 public class MemberService {
     private final MemberRepository memberRepository;
@@ -22,5 +25,12 @@ public class MemberService {
                 .ifPresent(m -> {
                     throw new IllegalStateException("이미 존재하는 ID 입니다.");
                 });
+    }
+    public List<Member> findMembers() {
+        return memberRepository.findAll();
+    }
+
+    public Optional<Member> findOne(String memberId) {
+        return memberRepository.findById(memberId);
     }
 }

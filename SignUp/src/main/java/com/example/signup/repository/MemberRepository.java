@@ -1,6 +1,6 @@
-package repository;
+package com.example.signup.repository;
 
-import dto.Member;
+import com.example.signup.dto.Member;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

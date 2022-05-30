@@ -1,4 +1,4 @@
-package controller;
+package com.example.signup.controller;
 
 import lombok.Getter;
 import lombok.Setter;

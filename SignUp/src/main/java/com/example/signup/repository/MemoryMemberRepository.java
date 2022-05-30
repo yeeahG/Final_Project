@@ -1,6 +1,6 @@
-package repository;
+package com.example.signup.repository;
 
-import dto.Member;
+import com.example.signup.dto.Member;
 
 import java.util.*;
 
@@ -24,7 +24,7 @@ public class MemoryMemberRepository implements MemberRepository {
     @Override
     public Optional<Member> findByPassword(String password) {
         return store.values().stream()
-                .filter(member -> member.getPw().equals(password))
+                .filter(member -> member.getPassword().equals(password))
                 .findAny();
     }
 
