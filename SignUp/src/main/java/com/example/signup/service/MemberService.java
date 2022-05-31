@@ -17,11 +17,11 @@ public class MemberService {
     public String join(Member member) {
         validateDuplicateMember(member);
         memberRepository.save(member);
-        return member.getId();
+        return member.getUserId();
     }
 
     private void validateDuplicateMember (Member member){
-        memberRepository.findById(member.getId())
+        memberRepository.findById(member.getUserId())
                 .ifPresent(m -> {
                     throw new IllegalStateException("이미 존재하는 ID 입니다.");
                 });

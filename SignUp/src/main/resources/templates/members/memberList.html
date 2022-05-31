@@ -8,13 +8,18 @@
             <tr>
                 <th>#</th>
                 <th>ID</th>
+
+                <th>#</th>
+                <th>PW</th>
+
             </tr>
             </thead>
             <tbody>
             <!--template 언어에서 members를 읽어들임 , ${} : model 안에 있는 값 -->
             <!--thymeleaf 문법 th:each : loop를 돎 -->
             <tr th:each="member : ${members}">
-                <td th:text="${member.id}"></td>
+                <td th:text="${member.userId}"></td>
+                <td th:text="${member.userPassword}"></td>
             </tr>
             </tbody>
         </table>

@@ -7,11 +7,9 @@ import java.util.*;
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<String, Member> store = new HashMap<>();
-    private static String id = new String();
     @Override
     public Member save(Member member) {
-        member.setId(id);
-        store.put(member.getId(), member);
+        store.put(member.getUserId(), member);
         return member;
     }
 
@@ -24,7 +22,7 @@ public class MemoryMemberRepository implements MemberRepository {
     @Override
     public Optional<Member> findByPassword(String password) {
         return store.values().stream()
-                .filter(member -> member.getPassword().equals(password))
+                .filter(member -> member.getUserPassword().equals(password))
                 .findAny();
     }
 
