@@ -1,12 +1,14 @@
 import React from 'react'
 import Login from './Login'
 import Signup from './Signup'
-import UserLogin from './UserLogin'
 
 const User = () => {
+    const style = {
+        margin: "5vw"
+      }
+
   return (
-    <div>
-        {/* <UserLogin /> */}
+    <div className='user__container'style={style}>
         <Login />
         <Signup />
     </div>

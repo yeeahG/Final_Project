@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import Axios from 'axios'
 
 const Signup = () => {
     let [phoneNumber, setPhoneNumber] = useState("");
@@ -50,15 +51,21 @@ const Signup = () => {
 //   database
 //   const onSubmitSignIn = async () => {
 //     const item = {
+          //user signup service에서 변수명이랑 똑같이
 //       phone: localStorage.getItem("phoneNumber"),
 //       user_name: localStorage.getItem("username"), 
 //       user_id: localStorage.getItem("signinId"),
 //       user_password: localStorage.getItem("signinPassword")
+
+//       phone: phoneNumber,
+//       user_name: username, 
+//       user_id: signinId,
+//       user_password: signinPassword
 //     }
 //     console.log(item);
 
 
-//     const result = await fetch("http://localhost:8090/signup", 
+//     const result = await fetch("http://localhost:8090/members/new", 
 //     {
 //       method:'POST', 
 //       body:JSON.stringify(item),
@@ -72,9 +79,19 @@ const Signup = () => {
 //     navigate.push("/add")
 //   }
 
+//node.js
+// const onSubmitSignIn1 = () => {
+//   Axios.post('http://localhost:3001/resigter', {
+//     userid: userId, password: password
+//   }).then((response) => {
+//     console.log(response);
+//   });
+// }
+
 
   return (
     <div className='signContainer'>
+        <h2>Sign up</h2>
         <input label="연락처" name="phone" placeholder="연락처" onChange={(e) => {setPhoneNumber(e.target.value)}}></input>
         <input label="이름" name="username" placeholder="이름" onChange={(e) => {setUsername(e.target.value)}}></input>
         <input label="아이디" name="userId" placeholder="아이디"  onChange={ (e) => {setSigninId(e.target.value)}}></input>
