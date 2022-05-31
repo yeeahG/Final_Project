@@ -13,6 +13,10 @@ public class MemoryMemberRepository implements MemberRepository {
         return member;
     }
 
+    public Member checkSamePassword(Member member){
+        return member;
+    }
+
     @Override
     public Optional<Member> findById(String id) {
         // 만약에 null일 가능성이 있을땐 Optional.ofNullable로 감싸준다

@@ -26,6 +26,11 @@ public class MemberService {
                     throw new IllegalStateException("이미 존재하는 ID 입니다.");
                 });
     }
+
+    private void checkSamePassword (Member member) {
+
+    }
+
     public List<Member> findMembers() {
         return memberRepository.findAll();
     }
