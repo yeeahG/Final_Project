@@ -23,7 +23,7 @@ const Login = () => {
   const Login = details => {
     console.log(details);
 
-    if (details.id == adminUser.id && details.password == adminUser.password) {
+    if (details.id === adminUser.id && details.password === adminUser.password) {
       //여기서 adminUser.id가 members table의 id로 바꾸기
       console.log("logged in");
       setUser({
@@ -66,12 +66,13 @@ const Login = () => {
 
 
   <div className='login__container'>
-    {(user.id != "") ? (
+    {(user.id !== "") ? (
       <div className='welcome'>
         <h2>Welcome, <span>{user.id}</span></h2>
         <button onClick={Logout}>
           <a href="/login">Logout</a>
         </button>
+        <br></br>
         <button>
           <a href="/userhome">Home</a>
         </button>
