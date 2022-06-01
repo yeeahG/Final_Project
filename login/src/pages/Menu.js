@@ -53,7 +53,7 @@ const Menu = () => {
                         <a className="Menu__StyledLink-sc-16aybht-4 bSpoLo" id="furniture" href="/">Home</a>
                     </div>
                     <div>
-                        <a className="Menu__StyledLink-sc-16aybht-4 bSpoLo" href="/homedecor">My dog</a>
+                        <a className="Menu__StyledLink-sc-16aybht-4 bSpoLo" href="/animal">My dog</a>
                     </div>
                     <div>
                         <a className="Menu__StyledLink-sc-16aybht-4 bSpoLo" id="furniture" href="/furniture">Dog Log</a>
