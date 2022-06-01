@@ -34,7 +34,7 @@ const Banner = () => {
             <button aria-label="button" class="Footer__UpButton-sc-1e1efh3-20 ekXVjW" >
 
                 <svg className='fCMfUw' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L18 18L35 1" stroke="black" stroke-width="1"/>
+                    <path d="M1 1L18 18L35 1" stroke="black" strokeWidth="1"/>
                 </svg>
                 
             </button>
@@ -44,10 +44,10 @@ const Banner = () => {
         <section className='yBZdR'>
             <button aria-label="button" class="Footer__UpButton-sc-1e1efh3-20 ekXVjW" >
                 <svg viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="49" cy="49" r="48.25" fill="white" stroke="black" stroke-width="1.5"></circle>
-                    <line x1="49.75" y1="35.75" x2="49.75" y2="76.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" ></line>
-                    <path d="M27 57L49 35L71 57" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <line x1="20.75" y1="31.25" x2="77.25" y2="31.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" ></line>
+                    <circle cx="49" cy="49" r="48.25" fill="white" stroke="black" strokeWidth="1.5"></circle>
+                    <line x1="49.75" y1="35.75" x2="49.75" y2="76.25" stroke="black" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round" ></line>
+                    <path d="M27 57L49 35L71 57" stroke="black" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <line x1="20.75" y1="31.25" x2="77.25" y2="31.25" stroke="black" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round" ></line>
                 </svg>
             </button>
         </section>

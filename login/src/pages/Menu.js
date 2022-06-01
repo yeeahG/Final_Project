@@ -69,9 +69,9 @@ const Menu = () => {
             </div>
         </section>
 
-        <div class="Container__StyledContainer-sc-6s6y4g-0 heASqm">
-            <div class="Space__StyledSpace-sc-h4nsl8-0 djzxvY"></div>
-            <div class="Border__StyeldBorder-sc-vrrbom-0 klPBwl"></div>
+        <div className="Container__StyledContainer-sc-6s6y4g-0 heASqm">
+            <div className="Space__StyledSpace-sc-h4nsl8-0 djzxvY"></div>
+            <div className="Border__StyeldBorder-sc-vrrbom-0 klPBwl"></div>
         </div>
 
 
