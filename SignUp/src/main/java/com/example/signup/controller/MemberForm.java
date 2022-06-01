@@ -11,5 +11,4 @@ public class MemberForm {
     private String id;
     private String password;
     private String checkPassword;
-
 }
