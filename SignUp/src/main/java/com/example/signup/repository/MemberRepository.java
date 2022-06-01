@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public interface MemberRepository {
     Member save(Member member);
-    Member checkSamePassword(Member member);
+    String checkSamePassword(Member member);
     Optional<Member> findById(String id);
     Optional<Member> findByPassword(String password);
     List<Member> findAll();

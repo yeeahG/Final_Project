@@ -16,10 +16,12 @@ public class MemberService {
     // 회원 가입
     public String join(Member member) {
         validateDuplicateMember(member);
+        checkSamePassword(member);
         memberRepository.save(member);
         return member.getUserId();
     }
 
+    // 회원가입시 제한 사항
     private void validateDuplicateMember (Member member){
         memberRepository.findById(member.getUserId())
                 .ifPresent(m -> {
@@ -28,13 +30,16 @@ public class MemberService {
     }
 
     private void checkSamePassword (Member member) {
-
+       if (!member.getUserPassword().equals(member.getCheckUserPassword())) {
+            throw new IllegalStateException("비밀번호가 동일하지 않습니다.");
+       }
     }
 
     public List<Member> findMembers() {
         return memberRepository.findAll();
     }
 
+    // 회원찾기
     public Optional<Member> findOne(String memberId) {
         return memberRepository.findById(memberId);
     }

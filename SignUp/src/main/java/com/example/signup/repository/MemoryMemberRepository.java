@@ -13,8 +13,14 @@ public class MemoryMemberRepository implements MemberRepository {
         return member;
     }
 
-    public Member checkSamePassword(Member member){
-        return member;
+    public String checkSamePassword(Member member)
+    {
+        if(!store.get(member.getUserPassword()).equals(store.get(member.getCheckUserPassword()))){
+            return "비밀번호가 일치하지 않습니다.";
+        }
+        else{
+            return member.getUserPassword();
+        }
     }
 
     @Override
@@ -25,9 +31,7 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public Optional<Member> findByPassword(String password) {
-        return store.values().stream()
-                .filter(member -> member.getUserPassword().equals(password))
-                .findAny();
+        return Optional.ofNullable(store.get(password));
     }
 
     @Override

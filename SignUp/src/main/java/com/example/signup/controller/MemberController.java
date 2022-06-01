@@ -29,7 +29,7 @@ public class MemberController {
         Member member = new Member();
         member.setUserPhoneNumber(form.getPhoneNumber());
         member.setUserName(form.getName());
-        member.setUserId(form.getId()); // html에서 입력한 값을 getName으로 꺼내서 Member에 저장
+        member.setUserId(form.getId());
         member.setUserPassword(form.getPassword());
         member.setCheckUserPassword(form.getCheckPassword());
 
