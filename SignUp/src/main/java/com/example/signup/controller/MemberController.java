@@ -27,10 +27,19 @@ public class MemberController {
     @PostMapping("/members/new") // data를 form에 넣어서 전달할때
     public String create(MemberForm form) {
         Member member = new Member();
-        member.setId(form.getId()); // html에서 입력한 값을 getName으로 꺼내서 Member에 저장
+        member.setUserPhoneNumber(form.getPhoneNumber());
+        member.setUserName(form.getName());
+        member.setUserId(form.getId());
+        member.setUserPassword(form.getPassword());
+        member.setCheckUserPassword(form.getCheckPassword());
 
         memberService.join(member); // 멤버 가입
-        System.out.println("member = " + member.getId());
+
+        System.out.println("phoneNumber =" + member.getUserPhoneNumber());
+        System.out.println("name =" + member.getUserName());
+        System.out.println("member = " + member.getUserId());
+        System.out.println("password =" + member.getUserPassword());
+        System.out.println("checkPassword =" + member.getCheckUserPassword());
 
         return "redirect:/";
     }

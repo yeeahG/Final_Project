@@ -7,12 +7,20 @@ import java.util.*;
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<String, Member> store = new HashMap<>();
-    private static String id = new String();
     @Override
     public Member save(Member member) {
-        member.setId(id);
-        store.put(member.getId(), member);
+        store.put(member.getUserId(), member);
         return member;
+    }
+
+    public String checkSamePassword(Member member)
+    {
+        if(!store.get(member.getUserPassword()).equals(store.get(member.getCheckUserPassword()))){
+            return "비밀번호가 일치하지 않습니다.";
+        }
+        else{
+            return member.getUserPassword();
+        }
     }
 
     @Override
@@ -23,9 +31,7 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public Optional<Member> findByPassword(String password) {
-        return store.values().stream()
-                .filter(member -> member.getPassword().equals(password))
-                .findAny();
+        return Optional.ofNullable(store.get(password));
     }
 
     @Override
