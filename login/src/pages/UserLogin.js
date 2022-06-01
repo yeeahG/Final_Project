@@ -8,6 +8,7 @@ const UserLogin = ({Login, error}) => {
     
     const submitHandler = e => {
         e.preventDefault();
+        console.log(details);
 
         Login(details);
         //details에 id, password 임시 저장되어있음

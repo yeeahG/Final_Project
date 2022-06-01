@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './Login.css'
 import UserLogin from './UserLogin';
 
 const Login = () => {
   const [user, setUser]= useState({name: "", id:""});
   const [error, setError]=useState("");
+
+  const navigate = useNavigate();
 
   const adminUser = {
     /*
@@ -34,8 +37,11 @@ const Login = () => {
   } 
 
   const Logout = () => {
-    console.log("log out");
-    setUser({name: "", id: ""});
+    // console.log("log out");
+    // setUser({name: "", id: ""});
+
+    localStorage.clear();
+    navigate.push('/')
   }
 
 
@@ -67,7 +73,7 @@ const Login = () => {
           <a href="/login">Logout</a>
         </button>
         <button>
-          <a href="/">Home</a>
+          <a href="/userhome">Home</a>
         </button>
       </div>
     )  : (

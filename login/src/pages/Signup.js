@@ -18,7 +18,7 @@ const Signup = () => {
     const navigate = useNavigate();
 
       
-    const onSubmitSignIn = (e) => {
+    const onSubmitSignUp = (e) => {
         //localstorage
         localStorage.setItem("phoneNumber", phoneNumber);
         localStorage.setItem("username", username);
@@ -52,6 +52,7 @@ const Signup = () => {
 //   const onSubmitSignIn = async () => {
 //     const item = {
           //user signup service에서 변수명이랑 똑같이
+          //🔑오른쪽부분을 db랑 같게 만들면 됨
 //       phone: localStorage.getItem("phoneNumber"),
 //       user_name: localStorage.getItem("username"), 
 //       user_id: localStorage.getItem("signinId"),
@@ -98,7 +99,7 @@ const Signup = () => {
         <input label="비밀번호" name="password" placeholder="비밀번호" type="password" onChange={(e) => {setSigninPassword(e.target.value)}}></input>
         <input label="비밀번호 확인" name="passwordConfirm" placeholder="비밀번호 확인" type="password"></input> 
         
-        <button onClick={onSubmitSignIn} className='inputBtn'>
+        <button onClick={onSubmitSignUp} className='inputBtn'>
             회원가입
         </button>
 
@@ -109,6 +110,7 @@ const Signup = () => {
         고객이름 {savedUsername}<br/>
         비밀번호 {savedSigninPassword}<br/>
         phon Number {savedPhoneNumber}<br/>
+        {localStorage.users}
       </div>
 
     </div>
