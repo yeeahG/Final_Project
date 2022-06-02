@@ -23,6 +23,7 @@ public class MemberController {
     @PostMapping(value = "/", consumes = {"application/xml","application/json"})
     @JsonProperty("member")
     public String createForm(@RequestBody Member member) {
+        System.out.println(member.getUserId());
         return memberService.join(member);
 
     }
