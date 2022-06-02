@@ -1,20 +1,29 @@
 package com.example.signup.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import com.example.signup.repository.MemberRepository;
-import com.example.signup.repository.MemoryMemberRepository;
 
 @Configuration
 public class SpringConfig {
 
-    @Bean // Spring Bean에 등록할꺼다
-    public MemberService memberService() {
-        return new MemberService(memberRepository());
+    private final MemberRepository memberRepository;
+
+    @Autowired
+    public SpringConfig(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
     }
 
-    @Bean // 얘도 Spring Bean에 등록
-    public MemberRepository memberRepository() {
-        return new MemoryMemberRepository();
+//    의존관계 세팅
+    @Bean
+    public MemberService memberService() {
+        return new MemberService(memberRepository);
     }
+
+//    @Bean
+//    public MemberRepository memberRepository() {
+////        return new JpaMemberRepository(em);
+//    }
+
 }
