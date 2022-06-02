@@ -19,7 +19,7 @@ public class MemberController {
         this.memberService = memberService;
     }
 
-    @PostMapping
+    @PostMapping(value = "/", consumes = {"application/xml","application/json"})
     public String createForm(@RequestBody Member member) {
         return memberService.join(member);
 
