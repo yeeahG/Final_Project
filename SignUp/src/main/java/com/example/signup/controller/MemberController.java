@@ -21,6 +21,7 @@ public class MemberController {
 
     @PostMapping
     public String createForm(@RequestBody Member member) {
+        System.out.println(member.getUserId());
         return memberService.join(member);
 
     }
