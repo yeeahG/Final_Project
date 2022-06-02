@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.example.signup.service.MemberService;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class MemberController {
     }
 
     @PostMapping(value = "/", consumes = {"application/xml","application/json"})
+    @JsonProperty("member")
     public String createForm(@RequestBody Member member) {
         return memberService.join(member);
 

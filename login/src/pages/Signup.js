@@ -79,6 +79,41 @@ const Signup = () => {
 //     result = await result.json()
 //     localStorage.setItem("user-info", JSON.stringify(result))
 //     navigate.push("/add")
+
+
+
+      //API
+      /*
+      const item = {
+        id: signinId,
+        name: username,
+        username: signinPassword,
+        email: 'a@a.a',
+        address: phoneNumber,
+      }
+      console.log(item);
+
+        //localstorage
+        /*
+        localStorage.setItem("phoneNumber", phoneNumber);
+        localStorage.setItem("username", username);
+        localStorage.setItem("signinId", signinId);
+        localStorage.setItem("signinPassword", signinPassword);
+
+        setSavedPhoneNumber(localStorage.getItem("phoneNumber"));
+        setSavedUsername(localStorage.getItem("username"));
+        setSavedSigninId(localStorage.getItem("signinId"));
+        setSavedSigninPassword(localStorage.getItem("signinPassword"));
+        */
+
+      /*
+      await fetch('https://jsonplaceholder.typicode.com/users', {
+        method: 'POST',
+        body: JSON.stringify(item),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      }) */
 //   }
 
 //node.js
@@ -88,71 +123,40 @@ const Signup = () => {
 //   }).then((response) => {
 //     console.log(response);
 //   });
-// }
+  // }
 
-const onSubmitSignUp = async () => {
-  /*
-  const item = {
-    id: signinId,
-    name: username,
-    username: signinPassword,
-    email: 'a@a.a',
-    address: phoneNumber,
-  }
-  console.log(item);
+  const onSubmitSignUp = async () => {
+    const item = {
+      userPhoneNumber: phoneNumber,
+      userId: signinId,
+      userName: username,
+      userPassword: signinPassword,
+      checkUserPassword: signinPasswordCheck
+    }
+    console.log(item);
 
-    //localstorage
-    /*
-    localStorage.setItem("phoneNumber", phoneNumber);
-    localStorage.setItem("username", username);
-    localStorage.setItem("signinId", signinId);
-    localStorage.setItem("signinPassword", signinPassword);
+    await fetch('http://localhost:8082/', {
+      method: 'POST',
+      // credentials: 'include',
+      // mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json;',
+        // 'Content-Type': 'application/json; charset=UTF-8',
+        // 'Access-Control-Allow-Origin': 'http://localhost:8082/',
+        // 'Accept': '*/*'
+      },
+      body: JSON.stringify(item),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('성공:', data);
+      })
+    .catch((error) => {
+      console.error('실패:', error);
+      });
 
-    setSavedPhoneNumber(localStorage.getItem("phoneNumber"));
-    setSavedUsername(localStorage.getItem("username"));
-    setSavedSigninId(localStorage.getItem("signinId"));
-    setSavedSigninPassword(localStorage.getItem("signinPassword"));
-    */
-
-  /*
-  await fetch('https://jsonplaceholder.typicode.com/users', {
-    method: 'POST',
-    body: JSON.stringify(item),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  }) */
-
-  const item = {
-    userPhoneNumber: phoneNumber,
-    userId: signinId,
-    userName: username,
-    userPassword: signinPassword,
-    checkUserPassword: signinPasswordCheck
-  }
-  console.log(item);
-
-  await fetch('http://localhost:8082', {
-    method: 'POST',
-    credentials: 'include',
-    body: JSON.stringify(item),
-    mode: 'no-cors',
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-      'Access-Control-Allow-Origin': 'http://localhost:8082',
-      'accept' : 'application/json'
-    },
-    contentType: 'application/json; charset=utf-8',
-  })
-
-
-
-
-  .then((response) => response.json())
-  .then((json) => console.log(json));
-
-  localStorage.setItem("userinfo", JSON.stringify(item))
-  alert('가입이 완료되었습니다')
+    localStorage.setItem("userinfo", JSON.stringify(item))
+    alert('가입이 완료되었습니다')
   }
 
   return (
