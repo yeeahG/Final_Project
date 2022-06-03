@@ -1,14 +1,28 @@
 import React from 'react'
+import UserHome from '../User/UserHome'
 import Login from './Login'
 import Signup from './Signup'
-import UserLogin from './UserLogin'
 
 const User = () => {
+    const style = {
+        margin: "5vw"
+      }
+
   return (
+    // <div className='user__container'style={style}>
+    //     <Login />
+    //     <Signup />
+    // </div>
     <div>
-        {/* <UserLogin /> */}
-        <Login />
-        <Signup />
+      {localStorage.getItem('users') ? 
+      <UserHome />
+      :
+  
+      <div className='user__container'style={style}>
+          <Login />
+          <Signup />
+      </div>
+      }
     </div>
   )
 }

@@ -43,8 +43,8 @@ const Menu = () => {
                 
                 <button onClick={()=>toggleMenu()} className="Menu__CloseButton-sc-16aybht-3 hGPXFL" >
                     <svg viewBox="0 0 32 30"fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="2.53033" y1="1.46967" x2="30.5303" y2="29.4697" stroke="black" stroke-width="1.5"></line>
-                        <line x1="1.46967" y1="29.4697" x2="29.4697" y2="1.46967" stroke="black" stroke-width="1.5"></line>
+                        <line x1="2.53033" y1="1.46967" x2="30.5303" y2="29.4697" stroke="black" strokeWidth="1.5"></line>
+                        <line x1="1.46967" y1="29.4697" x2="29.4697" y2="1.46967" stroke="black" strokeWidth="1.5"></line>
                     </svg>
                 </button>
 
@@ -53,7 +53,7 @@ const Menu = () => {
                         <a className="Menu__StyledLink-sc-16aybht-4 bSpoLo" id="furniture" href="/">Home</a>
                     </div>
                     <div>
-                        <a className="Menu__StyledLink-sc-16aybht-4 bSpoLo" href="/homedecor">My dog</a>
+                        <a className="Menu__StyledLink-sc-16aybht-4 bSpoLo" href="/animal">My dog</a>
                     </div>
                     <div>
                         <a className="Menu__StyledLink-sc-16aybht-4 bSpoLo" id="furniture" href="/furniture">Dog Log</a>
@@ -69,9 +69,9 @@ const Menu = () => {
             </div>
         </section>
 
-        <div class="Container__StyledContainer-sc-6s6y4g-0 heASqm">
-            <div class="Space__StyledSpace-sc-h4nsl8-0 djzxvY"></div>
-            <div class="Border__StyeldBorder-sc-vrrbom-0 klPBwl"></div>
+        <div className="Container__StyledContainer-sc-6s6y4g-0 heASqm">
+            <div className="Space__StyledSpace-sc-h4nsl8-0 djzxvY"></div>
+            <div className="Border__StyeldBorder-sc-vrrbom-0 klPBwl"></div>
         </div>
 
 

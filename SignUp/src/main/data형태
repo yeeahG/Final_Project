@@ -1,0 +1,7 @@
+{
+    "userId": "id",
+    "userPassword": "pw",
+    "checkUserPassword":"pw",
+    "userPhoneNumber":"p.n",
+    "userName": "name"
+}

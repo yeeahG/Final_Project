@@ -1,6 +1,6 @@
 package com.example.signup.repository;
 
-import com.example.signup.dto.Member;
+import com.example.signup.model.Member;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -9,8 +9,8 @@ import java.util.Optional;
 @Repository
 public interface MemberRepository {
     Member save(Member member);
-    Optional<Member> findById(String id);
-    Optional<Member> findByPassword(String password);
+    Optional<Member> findByUserId(String userId);
+    Optional<Member> findByUserPassword(String userPassword);
     List<Member> findAll();
 
 }
