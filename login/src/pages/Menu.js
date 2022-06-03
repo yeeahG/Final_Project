@@ -43,8 +43,8 @@ const Menu = () => {
                 
                 <button onClick={()=>toggleMenu()} className="Menu__CloseButton-sc-16aybht-3 hGPXFL" >
                     <svg viewBox="0 0 32 30"fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="2.53033" y1="1.46967" x2="30.5303" y2="29.4697" stroke="black" stroke-width="1.5"></line>
-                        <line x1="1.46967" y1="29.4697" x2="29.4697" y2="1.46967" stroke="black" stroke-width="1.5"></line>
+                        <line x1="2.53033" y1="1.46967" x2="30.5303" y2="29.4697" stroke="black" strokeWidth="1.5"></line>
+                        <line x1="1.46967" y1="29.4697" x2="29.4697" y2="1.46967" stroke="black" strokeWidth="1.5"></line>
                     </svg>
                 </button>
 
