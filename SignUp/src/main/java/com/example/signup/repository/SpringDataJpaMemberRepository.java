@@ -1,6 +1,6 @@
 package com.example.signup.repository;
 
-import com.example.signup.model.Member;
+import com.example.signup.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

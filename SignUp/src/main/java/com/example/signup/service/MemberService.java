@@ -1,9 +1,8 @@
 package com.example.signup.service;
 
-import com.example.signup.model.Member;
+import com.example.signup.domain.Member;
 import com.example.signup.repository.MemberRepository;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 import java.util.Optional;

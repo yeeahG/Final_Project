@@ -1,4 +1,4 @@
-package com.example.signup.model;
+package com.example.signup.domain;
 
 import lombok.Data;
 import lombok.Getter;
