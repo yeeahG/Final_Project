@@ -1,8 +1,7 @@
 package com.example.signup.repository;
 
-import com.example.signup.model.Member;
+import com.example.signup.domain.Member;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import java.util.List;

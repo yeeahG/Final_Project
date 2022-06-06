@@ -1,5 +1,6 @@
-package com.example.signup.service;
+package com.example.signup.config;
 
+import com.example.signup.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,9 +22,5 @@ public class SpringConfig {
         return new MemberService(memberRepository);
     }
 
-//    @Bean
-//    public MemberRepository memberRepository() {
-////        return new JpaMemberRepository(em);
-//    }
 
 }
